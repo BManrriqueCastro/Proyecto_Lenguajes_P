@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="author" content="grupo 4">
     <meta name="description" content="Proyecto de introducción a lenguajes de programación">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <!-- Titulo -->
     <title>Proyecto final</title>
     <!-- Favicon -->
@@ -55,14 +55,40 @@
                 </div>
             </div>
         </nav>
-        <div class="wraper container-fluid d-flex">
+        <div class="wraper container-fluid d-flex flex-column flex-md-row align-items-center justify-content-center">
             <div class="carrusel">
+                <!-- CARRUSEL DE IMÁGENES -->
+                <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="imgs/imagen1.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="imgs/imagen2.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="imgs/imagen3.jpg" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
             </div>
             <div class="info_products">
                 <section class="section_ofertas">
-                    <h2>Consola 2023XS</h2>
                     <article>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore ipsum corrupti officia. Quia voluptatum, doloribus earum ea vero ad incidunt, consequatur numquam reiciendis ipsa nam id nulla aliquid est similique?
+                        <h2>Consola 2023XS</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint, impedit incidunt architecto
+                            illum aliquid corrupti nihil reprehenderit quibusdam odit amet voluptatem doloremque
+                            laboriosam eius voluptatum dolorem vitae velit quas placeat.</p>
                     </article>
                     <div class="info_desc">
                         <div class="cant_desc">
@@ -93,4 +119,5 @@
         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
         crossorigin="anonymous"></script>
 </body>
+
 </html>

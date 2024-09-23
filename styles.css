@@ -1,6 +1,19 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Previene el scroll horizontal */
+}
+
+/** Definiendo variables*/
+:root {
+    --var-font-h2: clamp(1.5rem, 4vw, 5rem);
+    --var-font-p: clamp(0.9rem, 2vw, 1rem);
+    --var-bc-trans: transparent;
 }
 
 body {
@@ -126,111 +139,137 @@ body {
     --bs-gradient: none;
     /* Sin gradiente para un estilo limpio y moderno */
 }
-/** Seccion productos en oferta*/
+
+/** ------------- Seccion productos en oferta ---------------*/
 /* Contenedor de toda la seccion*/
 .wraper {
-    color: #fff;
-    background-color: rgb(246, 158, 44);
+    background-color:var(--var-bc-trans);
     gap: 3rem;
     padding: 1rem 2rem;
+    height: 80dvh;
 }
+
 /* Contenedor del carrusel*/
 .carrusel {
-    width: 900px;
-    height: 400px;
-    background-color: rebeccapurple;
+    width: clamp(350px, 100%, 800px);
+    height: 450px;
+    background-color: inherit;
+    display: grid;
+    place-content: center;
 }
+
+.carousel-inner {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.carousel-item img {
+    object-fit: cover;
+}
+
+
 /* Contenedor de la seccion de informacion de productos*/
 .info_products {
-    background-color: #a4cc83;
+    background-color: inherit;
     padding: 0.5rem 1.2em;
+    width: clamp(300px, 50%, 600px);
+    background: linear-gradient(180deg, #1e3a5f, #162b45); /* Gradiente de tonos azules */
+
+}
+
+.info_products .section_ofertas article {
+    padding: .2rem .2rem;
+
+    border-radius: 10px;
+}
+
+.info_products .section_ofertas article h2 {
+    font-size: var(--var-font-h2);
+    color: #f2f2f2;
+    text-shadow: 1px 1px 4px #b0d5f1; /* Sombra sutil para mejorar legibilidad */
+}
+
+/* Informacion basica de la oferta*/
+.info_products .section_ofertas article p {
+    font-size: var(--var-font-p);
+    color: #d1d1d1;
 }
 
 /* Contenedor informacion de descuento*/
 .info_desc {
-    background-color: #2b3c5e;
+    background-color: inherit;
     max-width: min-content;
     margin-top: 15px;
     padding: 0.5rem 0rem;
 }
+
 /*Contenedor cantidad de descuento*/
 .cant_desc {
-    background-color: #5a8a92;
+    background-color: inherit;
     margin-bottom: 8px;
 }
+
 /*Contenedor flexible para el precio actual y el porcentaje de descuento*/
 .cant_desc div {
     display: flex;
     align-items: center;
 }
-/*Quitando margenes a los Parrafos*/
-.cant_desc p {
+
+/*Precio Actual*/
+.cant_desc div p {
     margin-bottom: 0;
+    font-size: var(--var-font-p);
+    color: #f9e5ac;
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo ligeramente transparente */
+    padding: 5px 10px;
+    border-radius: 5px;
 }
-.cant_desc div ~ p {
-    text-decoration: line-through;
-    color: #fff8;
-}
+
 /*Modificando el span del porcentaje de descuento*/
 .cant_desc div span {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     margin-left: 0.5rem;
     background-color: #f00;
     color: #fff;
     padding: 2px;
-    padding-right: 3px;
-    border-radius: 4px;
+    border-radius: 5px;
 }
 
-.info_desc .cant_desc ~ p {
-    font-size: .7rem;
+/*Precio Normal*/
+.cant_desc div ~ p {
+    text-decoration: line-through;
+    color: #f9e5ac88;
+    font-size: .9rem;
+}
+
+/* Validez de la oferta */
+.info_desc .cant_desc~p {
+    font-size: .75rem;
     margin-bottom: 0rem;
+    color: #d1d1d1;
 }
 
+/* Contenedor link "Ver mas" */
 .info_desc .info_mas {
-    text-align: center;
-
+    margin-top: .3rem;
+    margin-right: .2rem;
 }
 
+/* Mas información de la oferta */
 .info_desc .info_mas a {
-    font-size: .5rem;
+    font-size: .6rem;
     text-decoration: none;
-    border: 1px solid #0005;
+    border: 1px solid rgba(196, 196, 196, 0.333);
     padding: .1rem .5rem;
-    color: #fff;
+    color: #d1d1d1;
     border-radius: 4px;
+    margin-left: .8rem;
 }
 
 .info_desc .info_mas a:hover {
-    font-size: .5rem;
-    box-shadow: 0px 0px 5px 0 rgba(0, 0, 0, 0.5);
+    font-size: .7rem;
+    box-shadow: 0px 0px 5px 0 rgba(255, 254, 254, 0.5);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*? ----------- MEDIA QUERIES ------------*/
 @media screen and (width <=767px) {
@@ -246,5 +285,25 @@ body {
     .navbar-nav {
         margin-top: 16px;
         margin-bottom: 16px;
+    }
+
+    .wraper {
+        color: #fff;
+        background-color: rgb(246, 158, 44);
+        gap: 1.5rem;
+        padding: 1rem 2rem;
+    }
+
+    .carrusel {
+        height: auto;
+    }
+
+    .info_products p {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .info_products h2 {
+        text-align: center;
     }
 }
