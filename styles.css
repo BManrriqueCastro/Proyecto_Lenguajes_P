@@ -146,7 +146,7 @@ body {
     background-color:var(--var-bc-trans);
     gap: 3rem;
     padding: 1rem 2rem;
-    height: 80dvh;
+    height: auto;
 }
 
 /* Contenedor del carrusel*/
@@ -288,8 +288,6 @@ body {
     }
 
     .wraper {
-        color: #fff;
-        background-color: rgb(246, 158, 44);
         gap: 1.5rem;
         padding: 1rem 2rem;
     }
