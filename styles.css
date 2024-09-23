@@ -126,6 +126,112 @@ body {
     --bs-gradient: none;
     /* Sin gradiente para un estilo limpio y moderno */
 }
+/** Seccion productos en oferta*/
+/* Contenedor de toda la seccion*/
+.wraper {
+    color: #fff;
+    background-color: rgb(246, 158, 44);
+    gap: 3rem;
+    padding: 1rem 2rem;
+}
+/* Contenedor del carrusel*/
+.carrusel {
+    width: 900px;
+    height: 400px;
+    background-color: rebeccapurple;
+}
+/* Contenedor de la seccion de informacion de productos*/
+.info_products {
+    background-color: #a4cc83;
+    padding: 0.5rem 1.2em;
+}
+
+/* Contenedor informacion de descuento*/
+.info_desc {
+    background-color: #2b3c5e;
+    max-width: min-content;
+    margin-top: 15px;
+    padding: 0.5rem 0rem;
+}
+/*Contenedor cantidad de descuento*/
+.cant_desc {
+    background-color: #5a8a92;
+    margin-bottom: 8px;
+}
+/*Contenedor flexible para el precio actual y el porcentaje de descuento*/
+.cant_desc div {
+    display: flex;
+    align-items: center;
+}
+/*Quitando margenes a los Parrafos*/
+.cant_desc p {
+    margin-bottom: 0;
+}
+.cant_desc div ~ p {
+    text-decoration: line-through;
+    color: #fff8;
+}
+/*Modificando el span del porcentaje de descuento*/
+.cant_desc div span {
+    font-size: 0.7rem;
+    margin-left: 0.5rem;
+    background-color: #f00;
+    color: #fff;
+    padding: 2px;
+    padding-right: 3px;
+    border-radius: 4px;
+}
+
+.info_desc .cant_desc ~ p {
+    font-size: .7rem;
+    margin-bottom: 0rem;
+}
+
+.info_desc .info_mas {
+    text-align: center;
+
+}
+
+.info_desc .info_mas a {
+    font-size: .5rem;
+    text-decoration: none;
+    border: 1px solid #0005;
+    padding: .1rem .5rem;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.info_desc .info_mas a:hover {
+    font-size: .5rem;
+    box-shadow: 0px 0px 5px 0 rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*? ----------- MEDIA QUERIES ------------*/
 @media screen and (width <=767px) {
     .container_lc1 {
