@@ -27,7 +27,8 @@ body {
 /** ---------- Barra de Navegación ---------- */
 header .navbar {
     background-color: #1A1A1A;
-    padding: 1rem 0;
+    padding: 1rem;
+    padding-left: 0;
 }
 
 .navbar-collapse {
@@ -361,6 +362,100 @@ header .navbar {
 }
 .gallery_product:nth-child(6):hover {
     background-image: linear-gradient(#0002, #0004, #fff2), url("../imgs/producto_mas_6.png");
+}
+
+/** ------------- footer ---------------*/
+footer {
+    background-color: #28e;
+    height: auto;
+    padding: 1rem 2rem 2rem 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.redes {
+    background-color: #1e3a5f;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.redes h3 {
+    padding-top: 1rem;
+    text-transform: uppercase;
+    font-size: var(--var-font-h2);
+}
+
+.icons_redes {
+    background-color: #b0d5f1;
+    padding-top: .5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.icons_redes svg {
+    width: 30px;
+}
+
+/** CONTACTO */
+.contact {
+    background-color: #f9e5ac;
+    padding: .5rem;
+    width: 400px;
+}
+
+.conatiner_logo-contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: .5rem;
+}
+
+.conatiner_logo-contact svg {
+    width: 30px;
+}
+
+.conatiner_logo-contact h4 {
+    margin-bottom: 0;
+}
+/** ---------- FORMULARIO DE CONTACTO ----------*/
+form {
+    background-color: #d1d1d1;
+    padding: 10px 0px;
+    width: auto; /*HACE QUE EL BLOQUE O CAJA NO SE ESTIRE MÁS DE LOS PX COLOCADOS*/
+    border-radius: 8px;
+    font-size: var( --var-font-p);
+}
+
+.form_input {
+    padding: 6px 10px;
+    width: 100%;
+}
+
+input, textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px 8px;
+    border: 1px solid #444;
+    background-color: transparent;
+    border-radius: 4px;
+    color: #eee;
+}
+
+textarea {
+    min-width: 100%;   /*DEFINIMOS EL ANCHO MINIMO QUE TENDRA EL TEXTAREA*/     
+    resize: none;
+    font-family: sans-serif; /*SE DEBE COLOCAR LA TIPOGRAFIA YA QUE TRAE UNA POR DEFECTO*/
+}
+
+label {
+    font-size: 0.88em;
+    line-height: 2;
+    width: 100%;
 }
 
 /*? ----------- CONTAINER QUERIES ------------*/
