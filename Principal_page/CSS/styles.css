@@ -572,8 +572,40 @@ input::placeholder, textarea::placeholder {
         grid-row: span 2;
     }
 }
-/**-------------------------------------------------------------------*/
+
 /*? ----------- MEDIA QUERIES ------------*/
+/**-------------------------------------------------------------------*/
+/* Ajuste para pantallas grandes de 1800px en adelante */
+@media (min-width: 1800px) {
+    .carrusel {
+        width: 1250px; /* Forzar el ancho máximo a 1500px en pantallas de 1800px o más */
+    }
+}
+/* Ajuste para pantallas medianas (1200px a 1799px) */
+@media (max-width: 1799px) and (min-width: 1200px) {
+    .carrusel {
+        width: 800px; /* Ajuste para pantallas medianas, mantiene el ancho en 1200px */
+    }
+}
+/**-------------------------------------------------------------------*/
+@media screen and (width <= 1200px) {
+    .wraper {
+        min-height: 50dvh;
+    }
+
+    .products_mas {
+        min-height: auto;
+    }
+}
+/**-------------------------------------------------------------------*/
+/** Media queries - Carrusel */
+@media (width >= 768px) and (width <= 992px) {
+
+    .carrusel {
+        height: auto;
+    }
+}
+/**-------------------------------------------------------------------*/
 @media (width < 768px) {
 
     .container_lc1 {
@@ -617,7 +649,7 @@ input::placeholder, textarea::placeholder {
         justify-items: center;
     }
 }
-
+/**-------------------------------------------------------------------*/
 @media (width < 608px) {
     .grid-item-2 h3 {
     font-size: clamp(1rem, 2rem - 1vw, 2rem);
@@ -645,37 +677,6 @@ input::placeholder, textarea::placeholder {
     }
     .icons_redes svg {
         width: 20px;
-    }
-}
-
-@media screen and (width <= 1200px) {
-    .wraper {
-        min-height: 50dvh;
-    }
-
-    .products_mas {
-        min-height: auto;
-    }
-}
-
-/** Media queries - Carrusel */
-@media (width >= 768px) and (width <= 992px) {
-
-    .carrusel {
-        height: auto;
-    }
-
-}
-/* Ajuste para pantallas grandes de 1800px en adelante */
-@media (min-width: 1800px) {
-    .carrusel {
-        width: 1250px; /* Forzar el ancho máximo a 1500px en pantallas de 1800px o más */
-    }
-}
-/* Ajuste para pantallas medianas (1200px a 1799px) */
-@media (max-width: 1799px) and (min-width: 1200px) {
-    .carrusel {
-        width: 800px; /* Ajuste para pantallas medianas, mantiene el ancho en 1200px */
     }
 }
 
