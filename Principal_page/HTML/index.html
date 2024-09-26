@@ -16,20 +16,6 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
     <!-- CSS -->
     <link rel="stylesheet" href="../CSS/styles.css">
-    <script>
-        // Función para cargar el contenido del footer dinámicamente
-        function loadFooter() {
-            fetch('footer.html') // Se busca el archivo footer.html
-                .then(response => response.text()) // Convierte la respuesta en texto
-                .then(data => {
-                    document.getElementById('footer-container').innerHTML = data; // Inserta el footer en el contenedor
-                })
-                .catch(error => console.error('Error al cargar el footer:', error));
-        }
-    
-        // Carga el footer una vez que la página ha terminado de cargar
-        document.addEventListener('DOMContentLoaded', loadFooter);
-    </script>
 </head>
 
 <body>
