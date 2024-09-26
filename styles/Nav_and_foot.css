@@ -1,0 +1,318 @@
+/** ---------- Barra de Navegación ---------- */
+.navbar {
+    background-color: #1A1A1A;
+    padding: 1rem;
+    padding-left: 0;
+}
+
+.navbar-collapse {
+    align-items: center;
+    justify-content: space-between;
+}
+
+/** ---------- Efecto linea para links del nav ---------- */
+.nav-link {
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    transition: color .3s ease-in;
+}
+
+.nav-link:hover {
+    color: #FFD700;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    /* Color de la línea de subrayado */
+    background: #FFD700;
+    left: 0;
+    bottom: 0;
+    /* Transición suave de 0.3s */
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    /* Al hacer hover, la línea subrayada aparece */
+    width: 100%;
+}
+
+/* Desactivando Focus de BT */
+.nav-link:focus {
+    color: #FFD700;
+}
+
+/** ---------- Icono de la pagina ---------- */
+.container_lc1 {
+    background-color: transparent;
+    margin: 0.5em 1rem;
+}
+
+.lc1 {
+    width: auto;
+    height: 40px;
+    object-fit: contain;
+    aspect-ratio: 16/9;
+}
+
+/** ---------------- Modificando el boton del menu de navegacion ---------------- */
+.navbar-toggler {
+    border-color: #fff;
+    /* Cambia el color del borde del botón a blanco */
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    /* Cambia el color del ícono de hamburguesa a blanco (#fff) */
+}
+
+/** ------------ Modificando el boton de buscar ------------ */
+.btn-outline-success {
+    /* Color del texto del botón */
+    --bs-btn-color: #ffffff;
+    /* Blanco puro para el texto */
+    /* Color del borde del botón */
+    --bs-btn-border-color: #ffffff;
+    /* Blanco puro para el borde */
+    /* Color del texto al pasar el mouse */
+    --bs-btn-hover-color: #000000;
+    /* Negro para el texto al hacer hover, creando contraste */
+    /* Color de fondo al pasar el mouse */
+    --bs-btn-hover-bg: #ffffff;
+    /* Blanco como fondo al hacer hover */
+    /* Color del borde al pasar el mouse */
+    --bs-btn-hover-border-color: #ffffff;
+    /* Mantener el borde blanco al hacer hover */
+    /* Sombra al enfocar el botón */
+    --bs-btn-focus-shadow-rgb: 255, 255, 255;
+    /* RGB blanco para la sombra de enfoque */
+    /* Color del texto al activar el botón (al hacer clic) */
+    --bs-btn-active-color: #000000;
+    /* Negro para el texto cuando el botón está activo */
+    /* Color de fondo al activar el botón (al hacer clic) */
+    --bs-btn-active-bg: #ffffff;
+    /* Fondo blanco al activar el botón */
+    /* Color del borde al activar el botón (al hacer clic) */
+    --bs-btn-active-border-color: #ffffff;
+    /* Mantener el borde blanco al activar el botón */
+    /* Sombra interior al activar el botón (al hacer clic) */
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    /* Sombra ligera negra al presionar el botón */
+    /* Color del texto cuando el botón está deshabilitado */
+    --bs-btn-disabled-color: #ffffff;
+    /* Mantener el texto blanco si el botón está deshabilitado */
+    /* Color de fondo cuando el botón está deshabilitado */
+    --bs-btn-disabled-bg: transparent;
+    /* Fondo transparente para el botón deshabilitado */
+    /* Color del borde cuando el botón está deshabilitado */
+    --bs-btn-disabled-border-color: #ffffff;
+    /* Mantener el borde blanco para el botón deshabilitado */
+    /* Desactivar el gradiente */
+    --bs-gradient: none;
+    /* Sin gradiente para un estilo limpio y moderno */
+}
+
+
+/** ------------- footer ---------------*/
+.footer {
+    background-color: var(--var-bc-trans);
+    height: auto;
+    padding: 1rem 2rem 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100dvw;
+}
+
+.titulos {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+    "EV redes contact";
+    align-items: center;
+    justify-items: start;
+}
+
+.grid-item-1 {
+    grid-area: EV;
+}
+
+.grid-item-2 {
+    grid-area: redes;
+}
+.grid-item-2 h3 {
+    text-transform: uppercase;
+    margin-bottom: 0;
+    font-size: 2.5rem;
+}
+
+.grid-item-3 {
+    grid-area: contact;
+}
+
+.conatiner_logo-contact {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.conatiner_logo-contact svg {
+    width: 30px;
+}
+
+.conatiner_logo-contact h3 {
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin-bottom: 0;
+}
+/**--------------------------*/
+.conteiner_general {
+    display: flex;
+    width: 100%;
+    /* align-content: space-between; */
+    justify-content: space-between;
+    align-items: center;
+}
+
+.conteiner_general .container_lc1 {
+    flex: 0.5;
+}
+.conteiner_general .container_lc1 .lc1 {
+    width: auto;
+    height: 80px;
+    object-fit: contain;
+    aspect-ratio: 16/9;
+}
+.redes {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.icons_redes {
+    padding-top: .5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.icons_redes svg {
+    width: 30px;
+}
+
+/** CONTACTO */
+.contact {
+    padding: .5rem;
+    flex: 1;
+}
+/** ---------- FORMULARIO DE CONTACTO ----------*/
+form {
+    width: auto; /*HACE QUE EL BLOQUE O CAJA NO SE ESTIRE MÁS DE LOS PX COLOCADOS*/
+    border-radius: 8px;
+    font-size: var( --var-font-p);
+}
+
+.form_input {
+    padding: 6px 10px;
+    width: 100%;
+}
+
+input, textarea, .form_input button {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px 8px;
+    border: 1px solid #000f;
+    /* border: none;
+    border-bottom: 1px solid #000f; */
+    background-color: transparent;
+    border-radius: 4px;
+    color: #000;
+    outline: none;
+}
+
+textarea {
+    min-width: 100%;   /*DEFINIMOS EL ANCHO MINIMO QUE TENDRA EL TEXTAREA*/     
+    resize: none;
+    font-family: sans-serif; /*SE DEBE COLOCAR LA TIPOGRAFIA YA QUE TRAE UNA POR DEFECTO*/
+}
+
+.form_input button:hover {
+    border: 1px solid #48266A;
+    color: #48266A;
+    border-radius: 4px;
+    box-shadow: 0px 0px 5px 0 #48266A88;
+}
+
+label {
+    font-size: 0.88em;
+    line-height: 2;
+    width: 100%;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #48266Aaa;
+}
+/**-------------------------------------------------------------------*/
+@media (width < 768px) {
+
+    .container_lc1 {
+        display: none;
+    }
+
+    .nav-link:hover::after {
+        /* Al hacer hover, la línea subrayada aparece */
+        width: 22%;
+    }
+
+    .navbar-nav {
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+
+    .titulos {
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "redes contact";
+        align-items: center;
+        justify-items: center;
+    }
+}
+/**-------------------------------------------------------------------*/
+@media (width < 608px) {
+    .grid-item-2 h3 {
+    font-size: clamp(1rem, 2rem - 1vw, 2rem);
+    }
+
+    .conatiner_logo-contact h3 {
+        font-size: clamp(1rem, 2rem - 1vw, 2rem);
+    }
+}
+
+@media (width < 518px) {
+    .grid-item-2 h3 {
+        font-size: clamp(1rem, 1vw, 1.2rem);
+    }
+
+    .conatiner_logo-contact h3 {
+        font-size: clamp(1rem, 1vw, 1.2rem);
+    }
+
+    .conatiner_logo-contact svg {
+        width: 18px;
+    }
+
+    .icons_redes {
+        gap: 2.5rem;
+    }
+    .icons_redes svg {
+        width: 20px;
+    }
+}
