@@ -21,7 +21,8 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #1B2A49;
+    background: linear-gradient(180deg, #1B2A49 0%, #48266A 50%, #43E7AD 100%); /*Opción: Neón con toques púrpuras y verdes
+    */
 }
 
 /** ---------- Barra de Navegación ---------- */
@@ -273,7 +274,7 @@ header .navbar {
 
 /** Seccion Productos mas vendidos */
 .products_mas {
-    background-color: #18233f;
+    background-color: var(--var-bc-trans);
     color: #fff;
     min-height: 100dvh;
     display: flex;
@@ -361,35 +362,89 @@ header .navbar {
     background-image: linear-gradient(#0008, #000a), url("../imgs/producto_mas_6.png");
 }
 .gallery_product:nth-child(6):hover {
-    background-image: linear-gradient(#0002, #0004, #fff2), url("../imgs/producto_mas_6.png");
+    background-image: linear-gradient(#0002, #0004, #ffffff00), url("../imgs/producto_mas_6.png");
 }
 
 /** ------------- footer ---------------*/
-footer {
-    background-color: #28e;
+.footer {
+    background-color: var(--var-bc-trans);
     height: auto;
-    padding: 1rem 2rem 2rem 0;
+    padding: 1rem 2rem 0 0;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    width: 100dvw;
 }
 
+.titulos {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+    "EV redes contact";
+    align-items: center;
+    justify-items: start;
+}
+
+.grid-item-1 {
+    grid-area: EV;
+}
+
+.grid-item-2 {
+    grid-area: redes;
+}
+.grid-item-2 h3 {
+    text-transform: uppercase;
+    margin-bottom: 0;
+    font-size: 2.5rem;
+}
+
+.grid-item-3 {
+    grid-area: contact;
+}
+
+.conatiner_logo-contact {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.conatiner_logo-contact svg {
+    width: 30px;
+}
+
+.conatiner_logo-contact h3 {
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin-bottom: 0;
+}
+/**--------------------------*/
+.conteiner_general {
+    display: flex;
+    width: 100%;
+    /* align-content: space-between; */
+    justify-content: space-between;
+    align-items: center;
+}
+
+.conteiner_general .container_lc1 {
+    flex: 0.5;
+}
+.conteiner_general .container_lc1 .lc1 {
+    width: auto;
+    height: 80px;
+    object-fit: contain;
+    aspect-ratio: 16/9;
+}
 .redes {
-    background-color: #1e3a5f;
     height: auto;
     display: flex;
     flex-direction: column;
-}
-
-.redes h3 {
-    padding-top: 1rem;
-    text-transform: uppercase;
-    font-size: var(--var-font-h2);
+    flex: 1;
 }
 
 .icons_redes {
-    background-color: #b0d5f1;
     padding-top: .5rem;
     display: flex;
     flex-direction: column;
@@ -403,29 +458,11 @@ footer {
 
 /** CONTACTO */
 .contact {
-    background-color: #f9e5ac;
     padding: .5rem;
-    width: 400px;
-}
-
-.conatiner_logo-contact {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: .5rem;
-}
-
-.conatiner_logo-contact svg {
-    width: 30px;
-}
-
-.conatiner_logo-contact h4 {
-    margin-bottom: 0;
+    flex: 1;
 }
 /** ---------- FORMULARIO DE CONTACTO ----------*/
 form {
-    background-color: #d1d1d1;
-    padding: 10px 0px;
     width: auto; /*HACE QUE EL BLOQUE O CAJA NO SE ESTIRE MÁS DE LOS PX COLOCADOS*/
     border-radius: 8px;
     font-size: var( --var-font-p);
@@ -436,14 +473,17 @@ form {
     width: 100%;
 }
 
-input, textarea {
+input, textarea, .form_input button {
     width: 100%;
     box-sizing: border-box;
     padding: 5px 8px;
-    border: 1px solid #444;
+    border: 1px solid #000f;
+    /* border: none;
+    border-bottom: 1px solid #000f; */
     background-color: transparent;
     border-radius: 4px;
-    color: #eee;
+    color: #000;
+    outline: none;
 }
 
 textarea {
@@ -452,10 +492,21 @@ textarea {
     font-family: sans-serif; /*SE DEBE COLOCAR LA TIPOGRAFIA YA QUE TRAE UNA POR DEFECTO*/
 }
 
+.form_input button:hover {
+    border: 1px solid #48266A;
+    color: #48266A;
+    border-radius: 4px;
+    box-shadow: 0px 0px 5px 0 #48266A88;
+}
+
 label {
     font-size: 0.88em;
     line-height: 2;
     width: 100%;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #48266Aaa;
 }
 
 /*? ----------- CONTAINER QUERIES ------------*/
@@ -523,7 +574,7 @@ label {
 }
 /**-------------------------------------------------------------------*/
 /*? ----------- MEDIA QUERIES ------------*/
-@media screen and (width < 768px) {
+@media (width < 768px) {
 
     .container_lc1 {
         display: none;
@@ -555,6 +606,45 @@ label {
 
     .info_products h2 {
         text-align: center;
+    }
+
+    .titulos {
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "redes contact";
+        align-items: center;
+        justify-items: center;
+    }
+}
+
+@media (width < 608px) {
+    .grid-item-2 h3 {
+    font-size: clamp(1rem, 2rem - 1vw, 2rem);
+    }
+
+    .conatiner_logo-contact h3 {
+        font-size: clamp(1rem, 2rem - 1vw, 2rem);
+    }
+}
+@media (width < 518px) {
+    .grid-item-2 h3 {
+        font-size: clamp(1rem, 1vw, 1.2rem);
+    }
+
+    .conatiner_logo-contact h3 {
+        font-size: clamp(1rem, 1vw, 1.2rem);
+    }
+
+    .conatiner_logo-contact svg {
+        width: 18px;
+    }
+
+    .icons_redes {
+        gap: 2.5rem;
+    }
+    .icons_redes svg {
+        width: 20px;
     }
 }
 
