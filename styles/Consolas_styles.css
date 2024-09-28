@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;  /*VUELVE MÁS SUAVE EL DESPLAZAMIENTO DEL SCROLL*/
+}
+
+/** Definiendo variables*/
+:root {
+    --var-font-h2: clamp(1.5rem, 4vw, 5rem);
+    --var-font-p: clamp(0.9rem, 2vw, 1rem);
+    --var-bc-trans: transparent;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100dvh;
+    box-sizing: border-box;
+    background: linear-gradient(180deg, #1B2A49 0%, #48266A 40%, #4895EF 100%);
+    overflow-x: hidden; /* Previene el scroll horizontal */
+}
