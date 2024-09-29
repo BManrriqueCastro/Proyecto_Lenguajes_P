@@ -9,7 +9,7 @@
 /** Definiendo variables*/
 :root {
     --var-font-h1: clamp(4rem, 5vw, 8rem);
-    --var-font-h2: clamp(1.5rem, 4vw, 5rem);
+    --var-font-h2: clamp(1.5rem, 4vw, 3rem);
     --var-font-p: clamp(0.9rem, 2vw, 1rem);
     --var-bc-trans: transparent;
 }
@@ -52,7 +52,6 @@ h1 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
     grid-auto-rows: 250px;
-
     margin: auto;
     margin-top: 1rem;
     width: 100%;
@@ -62,7 +61,7 @@ h1 {
 }
 
 .container_imgs {
-    border-radius: 10px;
+    border-radius: 8px;
     overflow: hidden;
     /* Asegura que el contenido no se salga del contenedor */
 }
@@ -83,6 +82,168 @@ h1 {
 
 .container_imgs a .imgs_consolas:hover {
     box-shadow: inset 0 0 30px rgba(0, 0, 0, 1);
+}
+
+/**Secciones de consolas individuales*/
+/*Div contedor*/
+.wraper {
+    gap: 2rem;
+    padding: 1rem 2rem;
+    min-height: auto;
+}
+/*Section por consolas*/
+.wraper section {
+    padding: 1rem 0;
+}
+/*Articles*/
+.wraper section .article_C {
+    display: flex;
+    align-items: flex-start; /* Asegura que el contenido se alinee con la parte superior de la imagen */
+    gap: 1rem;
+    justify-content: center;
+}
+
+/*Contenedor de imagenes*/
+.container_img-article {
+    overflow: hidden;
+    /* Asegura que el contenido no se salga del contenedor */
+}
+
+.container_img-article img {
+    width: 100%;
+    /* Ajusta el ancho al tamaño del contenedor */
+    height: 100%;
+    /* Ajusta la altura al tamaño del contenedor */
+    object-fit: contain;
+    /* Mantiene la proporción y rellena el espacio */
+}
+
+/** ----------- Tarjetas de información ----------*/
+/* Contenedor de la seccion de informacion de productos*/
+.info_products {
+    padding: 0.8em;
+    width: clamp(300px, 50%, 600px);
+    background: linear-gradient(180deg, #2a496f, #c5ced927) ; /* Gradiente de tonos azules */
+    border-radius: 4px;
+    
+}
+
+.info_products .section_ofertas article {
+    padding: 0 .5rem 1rem .5rem;
+}
+
+.info_products .section_ofertas article h2 {
+    font-size: var(--var-font-h2);
+    color: #f2f2f2;
+    text-wrap: pretty;
+}
+
+/* Contenedor informacion de descuento*/
+.info_desc {
+    max-width: fit-content;
+    margin-top: 1em;
+    margin-bottom: .5em;
+}
+
+/* Informacion basica de la oferta*/
+.info_desc .cant_desc > p {
+    font-size: var(--var-font-p);
+    margin-bottom: 0;
+    color: #f9e5ac;
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo ligeramente transparente */
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/*Contenedor flexible para el precio actual y el porcentaje de descuento*/
+.cant_desc div {
+    display: flex;
+    align-items: center;
+    margin-top: .2em;
+}
+
+/*Precio Actual*/
+.cant_desc div p {
+    margin-bottom: 0;
+    font-size: 0.8rem;
+    color: #d1d1d1;
+    padding: 5px 10px;
+}
+
+/*Modificando el span del porcentaje de descuento*/
+.cant_desc div span {
+    font-size: 0.9rem;
+    margin-left: 0rem;
+    background-color: #f00;
+    color: #fff;
+    padding: 2px;
+    border-radius: 5px;
+}
+
+/*Precio Normal*/
+.cant_desc div p {
+    text-decoration: line-through;
+    color: #f9e5ac88;
+    font-size: .9rem;
+}
+
+/* Validez de la oferta */
+.info_desc ~ p {
+    font-size: 1rem;
+    margin-bottom: 0rem;
+    color: #f2e7e7;
+}
+
+/**SECCION MAS INFORMACIÓN*/
+/* Estilos para el elemento details */
+details {
+    background-color: #fff;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para el summary */
+summary {
+    font-weight: bold;
+    font-size: 1em;
+    cursor: pointer;
+    color: #1B2A49;
+    padding: 5px;
+}
+
+summary:hover {
+    color: #4a69bd;
+}
+
+/* Estilos para las listas */
+ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+    font-size: .8rem;
+    line-height: 1.5;
+}
+
+/* Estilos para los enlaces, si los hubiere */
+a {
+    color: #4a69bd;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Efecto para detalles al abrir */
+details[open] {
+    border-color: #1B2A49;
 }
 
 /*? ----------- CONTAINER QUERIES ------------*/
@@ -112,29 +273,6 @@ h1 {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.wraper {
-    background-color: transparent;
-    width: 100%;
-    height: 800px;
-}
 
 /* Animación de parpadeo */
 @keyframes neon-glow-fast {
