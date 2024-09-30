@@ -4,6 +4,7 @@
     box-sizing: border-box;
     scroll-behavior: smooth;  /*VUELVE MÁS SUAVE EL DESPLAZAMIENTO DEL SCROLL*/
 }
+
 html, body {
     margin: 0;
     padding: 0;
@@ -127,7 +128,7 @@ body {
 }
 
 /* Validez de la oferta */
-.info_desc .cant_desc~p {
+.info_desc .cant_desc ~ p {
     font-size: .75rem;
     margin-bottom: 0rem;
     color: #d1d1d1;

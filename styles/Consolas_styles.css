@@ -6,9 +6,6 @@
     /*VUELVE MÁS SUAVE EL DESPLAZAMIENTO DEL SCROLL*/
 }
 
-a {
-    text-decoration: none;
-}
 /** Definiendo variables*/
 :root {
     --var-font-h1: clamp(4rem, 5vw, 8rem);
@@ -181,7 +178,7 @@ h1 {
 }
 
 /* Informacion basica de la oferta*/
-.info_desc .cant_desc>p {
+.info_desc .cant_desc > p {
     font-size: var(--var-font-p);
     margin-bottom: 0;
     color: #f9e5ac;
@@ -225,7 +222,7 @@ h1 {
 }
 
 /* Validez de la oferta */
-.info_desc~p {
+.info_desc ~ p {
     font-size: 1rem;
     margin-bottom: 0rem;
     color: #f2e7e7;
@@ -265,16 +262,6 @@ ul li {
     margin-bottom: 10px;
     font-size: .8rem;
     line-height: 1.5;
-}
-
-/* Estilos para los enlaces, si los hubiere */
-a {
-    color: #4a69bd;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
 }
 
 /* Efecto para detalles al abrir */
