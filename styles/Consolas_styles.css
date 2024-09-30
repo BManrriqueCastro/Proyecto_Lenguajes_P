@@ -6,6 +6,9 @@
     /*VUELVE MÁS SUAVE EL DESPLAZAMIENTO DEL SCROLL*/
 }
 
+a {
+    text-decoration: none;
+}
 /** Definiendo variables*/
 :root {
     --var-font-h1: clamp(4rem, 5vw, 8rem);
@@ -31,7 +34,7 @@ body {
     color: #fff;
     min-height: 100dvh;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: start;
     flex-direction: column;
     text-align: center;
     container-name: consolas;
@@ -52,7 +55,7 @@ h1 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
     grid-auto-rows: 250px;
-    margin: auto;
+    /* margin: auto; */
     margin-top: 1rem;
     width: 100%;
     gap: 16px;
@@ -91,14 +94,17 @@ h1 {
     padding: 1rem 2rem;
     min-height: auto;
 }
+
 /*Section por consolas*/
 .wraper section {
     padding: 1rem 0;
 }
+
 /*Articles*/
 .wraper section .article_C {
     display: flex;
-    align-items: flex-start; /* Asegura que el contenido se alinee con la parte superior de la imagen */
+    align-items: flex-start;
+    /* Asegura que el contenido se alinee con la parte superior de la imagen */
     gap: 1rem;
     justify-content: center;
 }
@@ -118,14 +124,43 @@ h1 {
     /* Mantiene la proporción y rellena el espacio */
 }
 
+.promocion {
+    margin-top: 2.5rem;
+    width: 100%;
+    height: 100px;
+    /* Ajusta la altura del contenedor */
+    overflow: hidden;
+    background-color: #ffffff;
+    /* Fondo del div */
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    position: relative;
+    padding: 0 20px;
+    /* Espacio lateral para el texto */
+}
+
+.promocion h2 {
+    font-size: 2.5rem;
+    font-family: "Bungee", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #2a496f;
+    position: absolute;
+    white-space: nowrap;
+    animation: movimiento 8s linear infinite;
+}
+
+
 /** ----------- Tarjetas de información ----------*/
 /* Contenedor de la seccion de informacion de productos*/
 .info_products {
     padding: 0.8em;
     width: clamp(300px, 50%, 600px);
-    background: linear-gradient(180deg, #2a496f, #c5ced927) ; /* Gradiente de tonos azules */
+    background: linear-gradient(180deg, #2a496f, #c5ced927);
+    /* Gradiente de tonos azules */
     border-radius: 4px;
-    
+
 }
 
 .info_products .section_ofertas article {
@@ -146,11 +181,12 @@ h1 {
 }
 
 /* Informacion basica de la oferta*/
-.info_desc .cant_desc > p {
+.info_desc .cant_desc>p {
     font-size: var(--var-font-p);
     margin-bottom: 0;
     color: #f9e5ac;
-    background-color: rgba(255, 255, 255, 0.1); /* Fondo ligeramente transparente */
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Fondo ligeramente transparente */
     padding: 5px;
     border-radius: 5px;
     text-align: center;
@@ -189,7 +225,7 @@ h1 {
 }
 
 /* Validez de la oferta */
-.info_desc ~ p {
+.info_desc~p {
     font-size: 1rem;
     margin-bottom: 0rem;
     color: #f2e7e7;
@@ -272,7 +308,34 @@ details[open] {
     }
 }
 
+/*ANIMACION TEXTO ESTAMOS EN PROMOCION*/
 
+@keyframes movimiento {
+    0% {
+      left: 100%;  /* Comienza fuera de la pantalla a la derecha */
+    }
+    50% {
+      left: 50%;  /* Llega al centro de la pantalla */
+    }
+    70% {
+      left: 40%;  /* Pausa en el centro por un 10% del tiempo total */
+    }
+    80% {
+        left: 35%;  /* Pausa en el centro por un 10% del tiempo total */
+    }
+    90% {
+        left: 20%; /* Termina fuera de la pantalla a la izquierda */
+    }
+    95% {
+        left: 10%; /* Termina fuera de la pantalla a la izquierda */
+    }
+    95% {
+        left: 5%; /* Termina fuera de la pantalla a la izquierda */
+    }
+    100% {
+      left: -50%; /* Termina fuera de la pantalla a la izquierda */
+    }
+}
 
 /* Animación de parpadeo */
 @keyframes neon-glow-fast {

@@ -23,6 +23,7 @@
 }
 
 .nav-link::after {
+    text-decoration: none;
     content: "";
     position: absolute;
     width: 0;
