@@ -89,7 +89,7 @@
 
    span {
       padding: 0.5rem;
-      border-radius: .8rem;
+      border-radius: 0.8rem;
       cursor: pointer;
       transition: all 0.3s ease;
 
@@ -124,6 +124,41 @@
          font-size: medium;
       }
    }
+
+   input,
+   textarea,
+   button {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0.5rem 1rem;
+      border: 1px solid #000f;
+      background-color: transparent;
+      border-radius: 0.5rem;
+      color: white;
+      outline: none;
+      border: 1px solid #c7c7c7;
+      transition: border-radius 0.3s ease;
+   }
+
+   button:hover {
+      background: white;
+      color: #48266a;
+      border-radius: 4px;
+      box-shadow: 0px 0px 5px 0 #48266a88;
+      border-radius: 1rem;
+   }
+
+   textarea {
+      min-width: 100%; /*DEFINIMOS EL ANCHO MINIMO QUE TENDRA EL TEXTAREA*/
+      resize: none;
+      font-family: sans-serif; /*SE DEBE COLOCAR LA TIPOGRAFIA YA QUE TRAE UNA POR DEFECTO*/
+   }
+
+   label {
+      font-size: 0.88em;
+      line-height: 2;
+      width: 100%;
+   }
 }
 
 .form_input {
@@ -138,40 +173,6 @@
       color: white;
       opacity: 0.5;
    }
-}
-input,
-textarea,
-button {
-   width: 100%;
-   box-sizing: border-box;
-   padding: 0.5rem 1rem;
-   border: 1px solid #000f;
-   background-color: transparent;
-   border-radius: 0.5rem;
-   color: white;
-   outline: none;
-   border: 1px solid #c7c7c7;
-   transition: border-radius 0.3s ease;
-}
-
-button:hover {
-   background: white;
-   color: #48266a;
-   border-radius: 4px;
-   box-shadow: 0px 0px 5px 0 #48266a88;
-   border-radius: 1rem;
-}
-
-textarea {
-   min-width: 100%; /*DEFINIMOS EL ANCHO MINIMO QUE TENDRA EL TEXTAREA*/
-   resize: none;
-   font-family: sans-serif; /*SE DEBE COLOCAR LA TIPOGRAFIA YA QUE TRAE UNA POR DEFECTO*/
-}
-
-label {
-   font-size: 0.88em;
-   line-height: 2;
-   width: 100%;
 }
 
 /**-------------------------------------------------------------------*/

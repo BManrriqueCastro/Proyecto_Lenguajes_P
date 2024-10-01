@@ -75,6 +75,23 @@ body {
    justify-content: space-between;
    padding: 2rem;
    height: 100%;
+
+   h3 {
+      font-weight: 500;
+      color: rgb(77, 50, 201);
+      margin-bottom: 18px;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: 0.3s;
+      cursor: pointer;
+      font-weight: bolder;
+   }
+
+   p {
+      color: rgb(112, 98, 160);
+      font-size: 15px;
+      line-height: 22px;
+   }
 }
 
 .catagory {
@@ -84,23 +101,6 @@ body {
    font-weight: 700;
    text-transform: uppercase;
    margin-bottom: 18px;
-}
-
-h3 {
-   font-weight: 500;
-   color: rgb(77, 50, 201);
-   margin-bottom: 18px;
-   text-transform: uppercase;
-   text-decoration: none;
-   transition: 0.3s;
-   cursor: pointer;
-   font-weight: bolder;
-}
-
-p {
-   color: rgb(112, 98, 160);
-   font-size: 15px;
-   line-height: 22px;
 }
 
 .bottom-details {
