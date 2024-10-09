@@ -34,3 +34,7 @@ El archivo principal `index.html` es la landing page, y la barra de navegación 
 - **Carga dinámica de la barra de navegación**: A través de JavaScript, se reutilizan estos componentes en todas las páginas.
 - **Estructura modular**: Organización de los componentes del sitio por módulos.
 - **Diseño visual atractivo**: Estilo gamer con gradientes y colores neón, optimizado para dispositivos móviles.
+
+### Link
+
+- Live Site URL: [Pagina](https://proyectofinalpio.netlify.app/)
