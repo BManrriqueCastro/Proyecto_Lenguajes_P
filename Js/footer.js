@@ -60,24 +60,56 @@ document.addEventListener("DOMContentLoaded", function () {
             </svg>
             <h3>Hablemos!</h3>
         </span>
-        <form>
+        <form id="contactForm">
             <label class="form_input">
                 <span>Nombre de contacto</span>
-                <input type="text" placeholder="Brayan Manrique" />
+                <input type="text" id="name" placeholder="Brayan Manrique"/>
             </label>
             <label class="form_input">
                 <span>Email</span>
-                <input type="email" placeholder="ejemplo@gmail.com" />
+                <input type="email" id="email" placeholder="ejemplo@gmail.com" />
             </label>
             <label class="form_input">
                 <span>Mensaje</span>
-                <textarea placeholder="Deja tu mensaje"></textarea>
+                <textarea id="message" placeholder="Deja tu mensaje"></textarea>
             </label>
-            <button>Enviar</button>
+            <button type="submit">Enviar</button>
         </form>
     </div>
 </div>
     `;
 
     document.querySelector("footer").innerHTML = footer;
+
+    // Agregamos la validación al formulario
+    document.getElementById("contactForm").addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevenir el envío por defecto
+
+        // Obtener los valores de los campos
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const message = document.getElementById("message").value.trim();
+
+        // Validar que el nombre no esté vacío
+        if (name === "") {
+            alert("Por favor, ingresa tu nombre.");
+            return;
+        }
+
+        // Validar el email con una expresión regular simple
+        const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if (!emailPattern.test(email)) {
+            alert("Por favor, ingresa un correo electrónico válido.");
+            return;
+        }
+
+        // Validar que el mensaje no esté vacío
+        if (message === "") {
+            alert("Por favor, ingresa tu mensaje.");
+            return;
+        }
+
+        // Si todo es válido, se puede enviar el formulario (aquí solo mostramos un mensaje)
+        alert("Formulario enviado correctamente");
+    });
 });
