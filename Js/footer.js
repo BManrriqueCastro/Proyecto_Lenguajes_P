@@ -82,34 +82,38 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector("footer").innerHTML = footer;
 
     // Agregamos la validación al formulario
-    document.getElementById("contactForm").addEventListener("submit", function (event) {
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
         event.preventDefault(); // Prevenir el envío por defecto
-
+    
         // Obtener los valores de los campos
         const name = document.getElementById("name").value.trim();
         const email = document.getElementById("email").value.trim();
         const message = document.getElementById("message").value.trim();
-
+    
         // Validar que el nombre no esté vacío
         if (name === "") {
             alert("Por favor, ingresa tu nombre.");
             return;
         }
-
-        // Validar el email con una expresión regular simple
+    
+        // Validar el email con una expresión regular mejorada
         const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
         if (!emailPattern.test(email)) {
             alert("Por favor, ingresa un correo electrónico válido.");
             return;
         }
-
+    
         // Validar que el mensaje no esté vacío
         if (message === "") {
             alert("Por favor, ingresa tu mensaje.");
             return;
         }
-
-        // Si todo es válido, se puede enviar el formulario (aquí solo mostramos un mensaje)
+    
+        // Si todo es válido, mostrar mensaje de éxito
         alert("Formulario enviado correctamente");
+    
+        // Reiniciar los campos del formulario
+        document.getElementById("contactForm").reset();
     });
+    
 });
