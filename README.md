@@ -1,7 +1,6 @@
-# Tienda Gamer - Landing Page y Modelo Entidad-Relación
+# Tienda Gamer - Landing Page TEACH WORLD
 
-Este repositorio contiene el código fuente y el diseño conceptual de una **Tienda Gamer** desarrollada con tecnologías web modernas. El proyecto está dividido en dos entregables principales: una landing page funcional.
-
+Este repositorio contiene el código fuente y el diseño conceptual de una **Tienda Gamer** desarrollada con tecnologías web modernas.
 ## Descripción
 
 La **Tienda Gamer** está enfocada en ofrecer una experiencia interactiva, visualmente atractiva y fácil de navegar. La página permite a los usuarios explorar consolas, periféricos y portátiles, organizados en secciones específicas. Utilizamos **HTML**, **CSS** y **JavaScript** para construir una interfaz moderna y **Bootstrap** para asegurar un diseño responsive.
@@ -23,15 +22,15 @@ Desarrollar una tienda online interactiva que permita la visualización y selecc
 El proyecto está organizado en las siguientes carpetas:
 
 - **assets/**: Contiene las imágenes y recursos gráficos.
-- **js/**: Scripts de JavaScript que gestionan las funcionalidades dinámicas (navegación).
+- **js/**: Scripts de JavaScript que gestionan las funcionalidades dinámicas.
 - **styles/**: Archivos CSS que controlan el diseño y apariencia del sitio.
 - **pages/**: Archivos HTML correspondientes a las secciones específicas de productos.
 
-El archivo principal `index.html` es la landing page, y la barra de navegación es cargada dinámicamente en todas las secciones mediante JavaScript para optimizar el mantenimiento del sitio.
+El archivo principal `index.html` es la landing page, y la barra de navegación y footer son cargados dinámicamente en todas las secciones mediante JavaScript para optimizar el mantenimiento del sitio.
 
 ## Funcionalidades
 
-- **Carga dinámica de la barra de navegación**: A través de JavaScript, se reutilizan estos componentes en todas las páginas.
+- **Carga dinámica**: A través de JavaScript, se reutilizan los componentes de navegación, footer y validación de formulario en todas las páginas.
 - **Estructura modular**: Organización de los componentes del sitio por módulos.
 - **Diseño visual atractivo**: Estilo gamer con gradientes y colores neón, optimizado para dispositivos móviles.
 
